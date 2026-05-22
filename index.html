@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoLimpio</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4fff4;
+        }
+
+        /* NAVBAR */
+
+        nav{
+            background-color: #2e8b57;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+        }
+
+        nav h1{
+            font-size: 32px;
+        }
+
+        nav ul{
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        /* HEADER */
+
+        header{
+            height: 90vh;
+
+            background:
+            linear-gradient(rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)),
+
+            url("empresa2.jpeg");
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            color: white;
+        }
+
+        .contenido-header h2{
+            font-size: 65px;
+            margin-bottom: 20px;
+        }
+
+        .contenido-header p{
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .contenido-header button{
+            padding: 15px 35px;
+            border: none;
+            border-radius: 10px;
+            background-color: #32cd32;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+/* BENEFICIOS */
+
+.beneficios{
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.beneficios h2{
+    font-size: 40px;
+    color: #2e8b57;
+    margin-bottom: 50px;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: white;
+    width: 300px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    margin-bottom: 20px;
+    color: #2e8b57;
+}
+        /* MATERIAS */
+
+        .materias{
+            padding: 80px 50px;
+            text-align: center;
+        }
+
+        .materias h2{
+            font-size: 45px;
+            color: #2e8b57;
+            margin-bottom: 50px;
+        }
+
+        .materia{
+            margin-bottom: 60px;
+        }
+
+        .materia button{
+            padding: 15px 35px;
+            border: none;
+            border-radius: 10px;
+            background-color: #2e8b57;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        #info-sociologia,
+        #info-emprendedor{
+            display: none;
+            margin-top: 35px;
+        }
+
+        #info-sociologia p,
+        #info-emprendedor p{
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+        #info-sociologia img,
+        #info-emprendedor img{
+            width: 500px;
+            margin: 15px;
+            border-radius: 20px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+        /* FOOTER */
+
+        footer{
+            background-color: #2e8b57;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <h1>EcoLimpio</h1>
+
+        <ul>
+            <li>Inicio</li>
+            <li>Materias</li>
+            <li>Trabajos</li>
+        </ul>
+
+    </nav>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="contenido-header">
+
+            <h2>EcoLimpio</h2>
+
+            <p>
+                ¡Limpia tu mundo, cuida el planeta! 
+            </p>
+
+    <a href="#trabajos">
+
+        <button>
+            Ver trabajos
+        </button>
+
+    </a>
+
+        </div>
+
+    </header>
+        <section class="beneficios">
+
+        <h2>¿Por qué elegir EcoClean?</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🌱 Ecológico</h3>
+                <p>No daña el medio ambiente ni contamina el agua.</p>
+            </div>
+
+            <div class="card">
+                <h3>💧 Biodegradable</h3>
+                <p>Sus ingredientes se descomponen naturalmente.</p>
+            </div>
+
+            <div class="card">
+                <h3>👕 Limpieza profunda</h3>
+                <p>Elimina manchas y protege las telas.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MATERIAS -->
+
+    <section class="materias" id="trabajos">
+
+        <h2>Materias y Trabajos</h2>
+
+        <!-- SOCIOLOGÍA -->
+
+        <div class="materia">
+
+            <button onclick="mostrarSociologia()">
+                Sociología
+            </button>
+
+            <div id="info-sociologia">
+
+                <p>
+                    Trabajo: Infografía
+                </p>
+
+                <img src="sociologia.jpeg">
+
+            </div>
+
+        </div>
+
+        <!-- DESARROLLO EMPRENDEDOR -->
+
+        <div class="materia">
+
+            <button onclick="mostrarEmprendedor()">
+                Desarrollo Emprendedor
+            </button>
+
+            <div id="info-emprendedor">
+
+                <p>
+                    Trabajo: Empresa de detergente biodegradable EcoClean.
+                </p>
+
+                <img src="empresa1.png">
+                <img src="empresa2.jpeg">
+                <img src="empresa3.jpeg">
+                <img src="empresa4.jpeg">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>EcoLimpio</h2>
+
+        <p>
+            Página creada con HTML, CSS y JavaScript.
+        </p>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function mostrarSociologia(){
+
+            let info =
+            document.getElementById("info-sociologia");
+
+            if(info.style.display === "block"){
+
+                info.style.display = "none";
+
+            }
+
+            else{
+
+                info.style.display = "block";
+
+            }
+
+        }
+
+        function mostrarEmprendedor(){
+
+            let info =
+            document.getElementById("info-emprendedor");
+
+            if(info.style.display === "block"){
+
+                info.style.display = "none";
+
+            }
+
+            else{
+
+                info.style.display = "block";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
