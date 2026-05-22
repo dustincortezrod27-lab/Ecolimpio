@@ -141,19 +141,31 @@
         }
 
         #info-sociologia,
-        #info-emprendedor{
+        #info-emprendedor,
+        #info-psicologia,
+        #info-ciudadania,
+        #info-artes,
+        #info-estadistica{
             display: none;
             margin-top: 35px;
         }
 
         #info-sociologia p,
-        #info-emprendedor p{
+        #info-emprendedor p,
+        #info-psicologia p,
+        #info-ciudadania p,
+        #info-artes p,
+        #info-estadistica p{
             font-size: 22px;
             margin-bottom: 25px;
         }
 
         #info-sociologia img,
-        #info-emprendedor img{
+        #info-emprendedor img,
+        #info-psicologia img,
+        #info-ciudadania img,
+        #info-artes img,
+        #info-estadistica img{
             width: 500px;
             margin: 15px;
             border-radius: 20px;
@@ -275,13 +287,116 @@
             <div id="info-emprendedor">
 
                 <p>
-                    Trabajo: Empresa de detergente biodegradable EcoClean.
+                    Trabajo: Empresa de detergente biodegradable EcoLimpio.
                 </p>
 
                 <img src="empresa1.png">
                 <img src="empresa2.jpeg">
                 <img src="empresa3.jpeg">
                 <img src="empresa4.jpeg">
+                <img src="empresa5.jpeg">
+                <img src="empresa6.jpeg"> 
+                <img src="empresa7.jpeg">   
+
+                <br><br>
+
+                <video width="700" controls>
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+
+                <br><br>
+
+                <a href="documento.pdf" target="_blank">
+
+                  <button>
+                    Ver PDF
+                  </button>
+
+                </a>
+
+            </div>
+        
+        </div>
+
+        <!-- PSICOLOGÍA -->
+
+        <div class="materia">
+
+            <button onclick="mostrarPsicologia()">
+                Psicología
+            </button>
+
+            <div id="info-psicologia">
+
+                <p>
+                    Trabajo: Infografía
+                </p>
+
+                <img src="psicologia.jpeg">
+
+            </div>
+
+        </div>
+
+        <!-- CIUDADANÍA -->
+
+        <div class="materia">
+
+            <button onclick="mostrarCiudadania()">
+                Ciudadanía
+            </button>
+
+            <div id="info-ciudadania">
+
+                <p>
+                    Trabajo: Infografía
+                </p>
+
+                <img src="ciudadania.jpeg">
+
+            </div>
+
+        </div>
+
+        <!-- ARTES -->
+
+        <div class="materia">
+
+            <button onclick="mostrarArtes()">
+                Artes
+            </button>
+
+            <div id="info-artes">
+
+                <p>
+                    Trabajo: Historieta, Fotografias y Tarjetas 3D
+                </p>
+
+               <img src="arte1.jpeg">
+               <img src="arte2.jpeg">
+               <img src="arte3.jpeg">
+               <img src="arte4.jpeg">
+               <img src="arte5.jpeg">
+
+            </div>
+
+        </div>
+
+        <!-- ESTADÍSTICA -->
+
+        <div class="materia">
+
+             <button onclick="mostrarEstadistica()">
+                Estadística
+            </button>
+
+            <div id="info-estadistica">
+
+                <p>
+                    Trabajo:Proyeccion de ventas
+                </p>
+
+                <img src="estadistica.jpeg">
 
             </div>
 
@@ -296,7 +411,7 @@
         <h2>EcoLimpio</h2>
 
         <p>
-            Página creada con HTML, CSS y JavaScript.
+            Detergente Biodegradable
         </p>
 
     </footer>
@@ -343,7 +458,82 @@
 
         }
 
-    </script>
+        function mostrarPsicologia(){
 
+            let info =
+            document.getElementById("info-psicologia");
+
+            if(info.style.display === "block"){
+
+                info.style.display = "none";
+
+            }
+
+            else{
+
+                info.style.display = "block";
+
+            }
+
+        }
+
+        function mostrarCiudadania(){
+
+            let info =
+            document.getElementById("info-ciudadania");
+
+            if(info.style.display === "block"){
+
+                info.style.display = "none";
+
+            }
+
+            else{
+
+                info.style.display = "block";
+
+            }
+
+        }
+
+        function mostrarArtes(){
+
+            let info =
+            document.getElementById("info-artes");
+
+            if(info.style.display === "block"){
+
+                info.style.display = "none";
+
+            }
+
+            else{
+
+                info.style.display = "block";
+
+            }
+
+        }
+        function mostrarEstadistica(){
+
+            let info =
+            document.getElementById("info-estadistica");
+
+            if(info.style.display === "block"){
+
+                info.style.display = "none";
+
+            }
+
+             else{
+
+                info.style.display = "block";
+
+            }
+
+        }
+
+    </script>
+        
 </body>
 </html>
